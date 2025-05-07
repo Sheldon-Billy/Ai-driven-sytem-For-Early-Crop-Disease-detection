@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.egg-info/
+*.egg
+.Python
+build/
+dist/
+node_modules
+
