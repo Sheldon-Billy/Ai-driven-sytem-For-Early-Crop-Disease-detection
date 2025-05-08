@@ -13,7 +13,6 @@ env:
 jobs:
   deploy_api:
     runs-on: ubuntu-latest
-    permissions: contents:read
     environment: production
     steps:
       - uses: actions/checkout@v3
