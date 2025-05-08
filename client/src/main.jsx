@@ -4,10 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import { Globalcontext } from "./hooks/Globalcontext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App />
-    <Toaster />
-  </BrowserRouter>
+  <Globalcontext>
+    <BrowserRouter>
+      <App />
+      <Toaster />
+    </BrowserRouter>
+  </Globalcontext>
 );

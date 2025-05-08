@@ -14,7 +14,6 @@ from PIL import Image
 from datetime import timezone
 from langchain.chat_models import AzureChatOpenAI
 from langchain.prompts import ChatPromptTemplate
-
 from .serializers import CropDiseasePredictionSerializers
 
 # api_key=settings.Open_Ai_Key
@@ -89,6 +88,7 @@ crop_prompt = ChatPromptTemplate.from_messages([
 
 # Create processing chain
 crop_chain = crop_prompt | llm
+
 
 class CropDiseaseAPI(APIView):
     parser_classes = [MultiPartParser]
@@ -177,6 +177,7 @@ class CropDiseaseAPI(APIView):
 
 import json
 import re
+
 
 def _parse_unstructured_response(self, text):
     """Parse GPT response into structured JSON format"""

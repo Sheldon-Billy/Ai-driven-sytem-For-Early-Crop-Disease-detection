@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Cards } from "../Components/Cards";
 import {
   ai,
@@ -133,12 +133,12 @@ const Home = () => {
         <h1 className="font-[Times] font-bold text-[40px] bg-gradient-to-r from-[#00b300] via-[white] to-[#00b300] text-transparent bg-clip-text  ">
           Ai-Driven Crop Disease Detection & Prevention
         </h1>
-        <p className="text-white font-[Times] text-[17px] font-extrabold">
+        <div className="text-white font-[Times] text-[17px] font-extrabold">
           <TypingEffect
             text="Empowering Famers with real insights for higher helthier crops &
           sustainable farming"
           />
-        </p>
+        </div>
 
         <div className="flex gap-[10px] mt-2">
           <Link
@@ -170,8 +170,8 @@ const Home = () => {
       </div>
 
       <div className="bg-gradient-to-br from-[#003100] via-[#049404] to-[#002800] grid grid-cols-4 gap-2  text-white my-[10px] mx-[10px]">
-        {cards.map(({ i, l, d }) => {
-          return <Cards key={i} image={i} labelee={l} description={d} />;
+        {cards.map(({ i, l, d }, index) => {
+          return <Cards key={index} image={i} labelee={l} description={d} />;
         })}
       </div>
     </>
