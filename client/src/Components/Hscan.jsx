@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import { hscan } from "../assets";
 const Hscan = () => {
   return (
-    <div className="mx-[10px] h-[300px] text-white flex items-center justify-center flex-col rounded-b-[10px] hscan ">
+    <div
+      className="mx-[10px] h-[300px] text-white flex items-center justify-center flex-col rounded-b-[10px] bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${hscan})` }}
+    >
       <div className="w-[900px] flex flex-col items-center justify-center backdrop-blur-[30px] rounded-2xl ">
         <h1 className="font-bold font-[Times] text-[30px] text-[#120079]">
           Ready to protect your crops?

@@ -5,9 +5,4 @@ body{
 }
 
 a.active{color: rgb(246, 255, 0);font-size: 18px;}
-.hscan{
-    background-image: url('src/assets/fa.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
- 
-}
+

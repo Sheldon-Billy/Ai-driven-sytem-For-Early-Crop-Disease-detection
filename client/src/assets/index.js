@@ -23,8 +23,9 @@ import github from "./github.png"
 import maizewoman from "./maize-woman.jpeg"
 import clearmaize from "./clear-maizelets.jpg"
 import greenlinewaves from "./greenlinesbg.jpg"
+import hscan from "./fa.jpg"
 
 
-export { background1, digit, smartleaf, greenlinewaves };
+export { background1, digit, smartleaf, greenlinewaves, hscan };
 export { background2, cardcomp1, cardcomp2, backkk, insight, ai, leaf, mobile, knowmore, clearmaize, };
 export { google, whatsapp, telegram, instagram, twitter, tiktok, youtube, discord, github, facebook, maizewoman }
