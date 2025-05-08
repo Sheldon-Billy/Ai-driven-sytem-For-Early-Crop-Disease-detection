@@ -13,6 +13,7 @@ import {
   smartleaf,
   clearmaize,
   maizewoman,
+  greenlinewaves,
 } from "../assets";
 import { Informatics } from "../Components/Informatics";
 import Hscan from "../Components/Hscan";
@@ -129,7 +130,10 @@ const Home = () => {
   ];
   return (
     <>
-      <div className="rounded-b-[10px] p-2 mx-[10px] flex flex-col items-center justify-center bg-[url('src/assets/greenlinesbg.jpg')] bg-cover ">
+      <div
+        className="rounded-b-[10px] p-2 mx-[10px] flex flex-col items-center justify-center bg-cover "
+        style={{ backgroundImage: `url(${greenlinewaves})` }}
+      >
         <h1 className="font-[Times] font-bold text-[40px] bg-gradient-to-r from-[#00b300] via-[white] to-[#00b300] text-transparent bg-clip-text  ">
           Ai-Driven Crop Disease Detection & Prevention
         </h1>
