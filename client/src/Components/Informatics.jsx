@@ -1,5 +1,4 @@
 import React from "react";
-import { ai, insight, leaf, mobile } from "../assets";
 
 export const Informatics = (props) => {
   return (

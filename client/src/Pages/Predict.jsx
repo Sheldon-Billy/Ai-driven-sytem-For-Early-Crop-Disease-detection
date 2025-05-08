@@ -32,7 +32,12 @@ const Predict = () => {
   const [image, setImage] = useState(null);
   const [description, setDescription] = useState("");
   const [apiResponse, setApiResponse] = useState(null);
-  const API_URL = "http://127.0.0.1:8000/crop-api/crop-disease/";
+  const isDevelopment = import.meta.env.MODE === "development";
+
+  const API_URL = isDevelopment
+    ? "http://127.0.0.1:8000/crop-api/crop-disease/"
+    : "crop-prediction-webapp-hyeeekfcahbuefb6.canadacentral-01.azurewebsites.net";
+
   const [char, setChar] = useState([]);
   const [recommendations, setRecommendations] = useState({
     immediate_actions: [],
@@ -256,7 +261,7 @@ const Predict = () => {
                     <TypeWriter
                       text={`${apiResponse.confidence.toFixed(
                         2
-                      )}(High confidence)`}
+                      )}% (High confidence)`}
                       speed={70}
                     />
                   </span>

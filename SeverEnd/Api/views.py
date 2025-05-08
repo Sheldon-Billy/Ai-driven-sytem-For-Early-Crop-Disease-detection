@@ -144,13 +144,14 @@ class CropDiseaseAPI(APIView):
             # Preprocess image
             img = Image.open(image).convert('RGB')
             img = img.resize((180,180))  # Match model's expected sizing
-            img_array = tf.keras.preprocessing.image.array_to_img(img)
+            img_array = tf.keras.utils.array_to_img(img)
             img_array = tf.expand_dims(img_array,axis=0)
 
             # Make prediction
             predictions = model.predict(img_array)
-            confidence = np.max(predictions[0]) * 100
-            predicted_class = np.argmax(predictions[0])
+            score=tf.nn.softmax(predictions)
+            confidence = round(float(np.max(score) * 100), 2)
+            predicted_class=np.argmax(score)
             print(f"Predicted{crop_classes[predicted_class]} with accuracy of {confidence}")
             return crop_classes[predicted_class], confidence
             
