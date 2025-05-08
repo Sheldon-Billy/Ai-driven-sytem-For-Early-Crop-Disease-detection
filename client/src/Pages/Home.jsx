@@ -56,7 +56,7 @@ const Home = () => {
     }, [index, isDeleting, text, speed, delay, backspaceSpeed]);
 
     return (
-      <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-[#00b300] text-transparent bg-clip-text">
+      <h1 className="text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-[#00b300] text-transparent bg-clip-text">
         {displayedText}
         <span className="animate-blink">|</span>
       </h1>
@@ -131,33 +131,33 @@ const Home = () => {
   return (
     <>
       <div
-        className="rounded-b-[10px] p-2 mx-[10px] flex flex-col items-center justify-center bg-cover "
+        className="rounded-b-[10px] p-2 mx-[10px] flex flex-col items-center justify-center bg-cover"
         style={{ backgroundImage: `url(${greenlinewaves})` }}
       >
-        <h1 className="font-[Times] font-bold text-[40px] bg-gradient-to-r from-[#00b300] via-[white] to-[#00b300] text-transparent bg-clip-text  ">
+        <h1 className="font-[Times] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] bg-gradient-to-r from-[#00b300] via-[white] to-[#00b300] text-transparent bg-clip-text">
           Ai-Driven Crop Disease Detection & Prevention
         </h1>
-        <div className="text-white font-[Times] text-[17px] font-extrabold">
+        <div className="text-white font-[Times] text-sm sm:text-base md:text-[17px] font-extrabold text-center px-2">
           <TypingEffect
             text="Empowering Famers with real insights for higher helthier crops &
           sustainable farming"
           />
         </div>
 
-        <div className="flex gap-[10px] mt-2">
+        <div className="flex gap-[10px] mt-2 flex-wrap justify-center">
           <Link
             to="/predict"
-            className="bg-green-700 rounded-[5px] p-1.5 text-white hover:bg-orange-500 transition-[ease_2s] hover:transform-[scale(1.1)]"
+            className="bg-green-700 rounded-[5px] p-1.5 text-white hover:bg-orange-500 transition-all hover:scale-105 text-sm sm:text-base"
           >
             Get Started
           </Link>
-          <button className="bg-[green] rounded-[5px] p-1.5 text-white hover:bg-orange-500 transition-[ease_2s] hover:transform-[scale(1.1)]">
+          <button className="bg-[green] rounded-[5px] p-1.5 text-white hover:bg-orange-500 transition-all hover:scale-105 text-sm sm:text-base">
             Learn More
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 text-white my-[10px] mx-[40px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-white my-[10px] mx-[10px] sm:mx-[20px] md:mx-[40px]">
         {information.map(({ img, label, info }, i) => {
           return <Informatics key={i} img={img} label={label} info={info} />;
         })}
@@ -168,12 +168,12 @@ const Home = () => {
       </div>
 
       <div className="flex gap-4 items-center justify-center mt-4 text-white">
-        <h2 className="bg-[#163300] p-2 rounded-2xl  hover:bg-blue-500 transition-all">
+        <h2 className="bg-[#163300] p-2 rounded-2xl hover:bg-blue-500 transition-all text-sm sm:text-base md:text-lg">
           Get to know more
         </h2>
       </div>
 
-      <div className="bg-gradient-to-br from-[#003100] via-[#049404] to-[#002800] grid grid-cols-4 gap-2  text-white my-[10px] mx-[10px]">
+      <div className="bg-gradient-to-br from-[#003100] via-[#049404] to-[#002800] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-white my-[10px] mx-[10px] p-4">
         {cards.map(({ i, l, d }, index) => {
           return <Cards key={index} image={i} labelee={l} description={d} />;
         })}
