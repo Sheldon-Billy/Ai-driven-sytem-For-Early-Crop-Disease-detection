@@ -5,7 +5,7 @@ import { hscan } from "../assets";
 const Hscan = () => {
   return (
     <div
-      className="mx-2 sm:mx-3 md:mx-[10px] h-[250px] sm:h-[300px] md:h-[350px] text-white flex items-center justify-center flex-col rounded-b-[10px] bg-cover bg-no-repeat bg-center"
+      className="mx-2 sm:mx-3 md:mx-[10px] h-[250px] sm:h-[300px] md:h-[350px] text-white flex items-center justify-center flex-col rounded-b-[10px] bg-cover bg-no-repeat "
       style={{ backgroundImage: `url(${hscan})` }}
     >
       <div className="w-full sm:w-[90%] md:w-[800px] lg:w-[900px] flex flex-col items-center justify-center backdrop-blur-sm sm:backdrop-blur-[15px] md:backdrop-blur-[30px] rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6">
